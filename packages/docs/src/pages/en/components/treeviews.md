@@ -1,4 +1,5 @@
 ---
+nav: Treeviews
 meta:
   title: Treeview component
   description: The treeview component is a user interface that is used to represent hierarchical data in a tree structure.
@@ -7,7 +8,6 @@ related:
   - /components/lists/
   - /components/list-item-groups/
   - /components/timelines/
-
 ---
 
 # Treeview
@@ -30,23 +30,11 @@ A basic example
 
 ### Props
 
-#### Activatable
+#### Density
 
-Treeview nodes can be activated by clicking on them.
+Use the **density** prop to provide a more compact layout that decreases the heights of the items.
 
-<example file="v-treeview/prop-activatable" />
-
-#### Color
-
-You can control the text and background color of the active treeview node.
-
-<example file="v-treeview/prop-color" />
-
-#### Dense mode
-
-Dense mode provides more compact layout with decreased heights of the items.
-
-<example file="v-treeview/prop-dense" />
+<example file="v-treeview/prop-density" />
 
 #### Hoverable
 
