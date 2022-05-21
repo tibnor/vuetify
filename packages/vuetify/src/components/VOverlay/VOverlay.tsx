@@ -15,6 +15,7 @@ import { useTeleport } from '@/composables/teleport'
 import { makeDimensionProps, useDimension } from '@/composables/dimensions'
 import { makeLazyProps, useLazy } from '@/composables/lazy'
 import { useStack } from '@/composables/stack'
+import { useOverlay } from '@/composables/overlay'
 
 // Directives
 import { ClickOutside } from '@/directives/click-outside'
@@ -197,6 +198,8 @@ export const VOverlay = genericComponent<new () => {
       })
     }
 
+    const { overlayZIndex } = useOverlay(isActive)
+
     useRender(() => (
       <>
         { slots.activator?.({
@@ -225,6 +228,7 @@ export const VOverlay = genericComponent<new () => {
                 ]}
                 style={{
                   top: convertToUnit(top.value),
+                  zIndex: overlayZIndex.value,
                 }}
                 ref={ root }
                 {...attrs}
